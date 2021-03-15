@@ -1,0 +1,131 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-perspective: 200px;
+  perspective: 200px;
+}
+body {
+  background: linear-gradient(#cddc39, #009688);
+  height: 100vh;
+}
+.row {
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: #fbd400;
+}
+.col {
+  flex-basis: 25%;
+  overflow: hidden;
+  position: relative;
+}
+.col span {
+  width: 0px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 15px solid #ffe501;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50px);
+  z-index: 2;
+}
+.col img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+}
+.col h4 {
+  text-transform: capitalize;
+  font-family: "Courier New", Courier, monospace;
+}
+.col p {
+  text-transform: capitalize;
+  margin: 10px 0px;
+}
+.Socail {
+  margin: 15px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Socail .fab {
+  flex-basis: 11%;
+  border: 1px solid #000;
+  height: 30px;
+  margin: 0px 5px;
+  padding-top: 5px;
+  padding: 5px 2px;
+  transition: transform 0.4s ease-in-out;
+}
+.Socail .fab:hover {
+  background-color: #000;
+  color: #fff;
+  -webkit-transform: translateY(-7px);
+  transform: translateY(-7px);
+}
+.col img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.arrow {
+  right: unset;
+  left: 0px;
+  transform: rotateY(180deg) !important;
+}
+/********Medai Query***************/
+@media screen and (max-width: 800px) {
+  .row {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .row .col {
+    flex-basis: 50%;
+  }
+  .Socail .fab {
+    flex-basis: 12%;
+    font-size: 0.9rem;
+    height: 25px;
+  }
+  .col h4 {
+    font-size: 0.9rem;
+  }
+  .col p {
+    font-size: 0.8rem;
+  }
+  .row .col:first-of-type {
+    order: 1;
+  }
+  .row .col:nth-of-type(2) {
+    order: 2;
+  }
+  .row .col:nth-of-type(3) {
+    order: 4;
+  }
+  .row .col:nth-of-type(4) {
+    order: 3;
+  }
+  .row .col:nth-of-type(5) {
+    order: 6;
+  }
+  .row .col:nth-of-type(6) {
+    order: 5;
+  }
+  .row .col:nth-of-type(7) {
+    order: 7;
+  }
+  .row .col:nth-of-type(8) {
+    order: 9;
+  }
+  .row .col:nth-of-type(9) {
+    order: 8;
+  }
+ 
+}
